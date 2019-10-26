@@ -14,6 +14,17 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <button style={{
+          backgroundColor: "#28c2ff",
+          color: "#173753",
+          width: "200px",
+          height: "50px",
+          borderRadius: "0 0 50px 15px #2191fb",
+          boxShadow: "50px",
+          transform: "all 2s"
+        }}>
+          Example Button
+        </button>
       </React.Fragment>
     );
   }
