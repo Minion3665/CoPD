@@ -23,7 +23,10 @@ class App extends Component {
           borderRadius: "100px",
           maxWidth: "80vw",
           transition: "all 1s",
-          overflow: "hidden"
+          overflow: "hidden",
+          position: "relative",
+          left: "50%",
+          transform: "translate(-50%, 0)"
         }}>
           Example Button
         </button>
