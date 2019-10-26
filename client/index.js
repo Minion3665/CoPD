@@ -21,7 +21,8 @@ class App extends Component {
           height: "100px",
           boxShadow: "0 0 50px 15px #2191fb",
           borderRadius: "100px",
-          transform: "all 2s"
+          maxWidth: "80vw",
+          transition: "all 2s"
         }}>
           Example Button
         </button>
