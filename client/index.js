@@ -13,27 +13,8 @@ console.log(
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route
-            path="/status"
-            render={() => {
-              changeFavicon('/images/canaryLogo.png');
-              return (
-                <iframe src="https://chromebook777production.statuspage.io/" />
-              );
-            }}
-          />
-          <Route
-            render={() => {
-              changeFavicon('/images/chromebotLogo.png');
-              return (
-                <iframe src="https://chromebot-canary-and-chromebot.weebly.com/" />
-              );
-            }}
-          />
-        </Switch>
-      </Router>
+      <React.Fragment>
+      </React.Fragment>
     );
   }
 }
