@@ -13,9 +13,8 @@ class Button extends Component {
     return (
       <React.Fragment>
         <button style={{width: this.state.width}} onClick={() => {
-          this.setState({width: "0"});
+          this.setState({width: "0", onClick: {() => {}}});
           this.state.onClick();
-          this.setState({onClick: this.props.onClick, width: props.width ? props.width : "400px"});
         }}>
           {this.props.children}
         </button>
