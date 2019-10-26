@@ -1,8 +1,24 @@
-/* Iframes deserve some css */
-iframe {
-	border: 0;
-	box-sizing: border-box;
+/* Let's style our fancy buttons*/
+button {
+	background-color: #28c2ff;
+	color: #173753;
+	width: 400px;
+	height: 100px;
+	box-shadow: #2191fb 0px 0px 50px 15px;
+	border-radius: 100px;
+	max-width: 80vw;
+	transition: all 1s ease 0s;
+	overflow: hidden;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
 }
+
+button:hover {
+	background-color: #2af5ff;
+	box-shadow: #89daff 0px 0px 50px 15px;
+}
+
 
 /* And the rest of the css... */
 * {
