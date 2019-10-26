@@ -22,7 +22,8 @@ class App extends Component {
           boxShadow: "0 0 50px 15px #2191fb",
           borderRadius: "100px",
           maxWidth: "80vw",
-          transition: "all 2s"
+          transition: "all 1s",
+          overflow: "hidden"
         }}>
           Example Button
         </button>
