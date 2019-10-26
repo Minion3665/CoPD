@@ -12,6 +12,8 @@ button {
 	position: relative;
 	left: 50%;
 	transform: translate(-50%);
+	line-height: 90%;
+	font-size: 150%;
 }
 
 button:hover {
