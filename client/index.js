@@ -17,10 +17,10 @@ class App extends Component {
         <button style={{
           backgroundColor: "#28c2ff",
           color: "#173753",
-          width: "200px",
-          height: "50px",
-          borderRadius: "0 0 50px 15px #2191fb",
-          boxShadow: "50px",
+          width: "400px",
+          height: "100px",
+          boxShadow: "0 0 50px 15px #2191fb",
+          borderRadius: "100px",
           transform: "all 2s"
         }}>
           Example Button
