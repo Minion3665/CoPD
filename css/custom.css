@@ -7,7 +7,6 @@ button {
 	box-shadow: #2191fb 0px 0px 50px 15px;
 	border-radius: 100px;
 	max-width: 80vw;
-	transition: all 1s ease 0s;
 	overflow: hidden;
 	position: relative;
 	left: 50%;
@@ -16,12 +15,20 @@ button {
 	font-size: 150%;
 	font-weight: bolder;
 }
+div.buttoncontainer {
+	width: 400px;
+	max-width: 80vw;
+	transition: all 1s ease 0s;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
 button.animatein {
 	-webkit-animation-name: lengthen;
-	-webkit-animation-duration: 4s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-fill-mode: forwards;
 	animation-name: example;
-	animation-duration: 4s;
+	animation-duration: 1s;
 	animation-fill-mode: forwards;
 }
 
