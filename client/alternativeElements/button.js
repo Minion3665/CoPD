@@ -7,20 +7,36 @@ class Button extends Component {
     this.state = {
       width: props.width ? props.width : "400px",
       onClick: props.onClick,
-      visible: true
+      visible: props.visible
+    }
+    if (props.returnfunctions) {
+      props.returnfunctions({show: this.show, hide: this.hide})
     }
   }
+  show() {
+    this.setState({visible: true, width: this.props.width ? this.props.width : "400px", onClick: this.props.onClick});
+  }
+  hide() {
+    this.setState({width: "0", onClick: () => {}});
+    window.setTimeout(() => {
+      this.setState({visible: false});
+    }, 1000);
+  }
   render() {
-    return (
-      <React.Fragment>
-        <button style={{width: this.state.width, display: visible ? "none" : "block"}} onClick={() => {
-          this.setState({width: "0", onClick: () => {}});
-          this.state.onClick();
-        }}>
-          {this.props.children}
-        </button>
-      </React.Fragment>
-    );
+    if (visible) {
+      return (
+        <React.Fragment>
+          <button style={{width: this.state.width}} onClick={() => {
+            this.hide();
+            this.state.onClick();
+          }}>
+            {this.props.children}
+          </button>
+        </React.Fragment>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
