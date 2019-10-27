@@ -12,13 +12,23 @@ console.log(
 );
 
 class App extends Component {
+  constructor(props) {
+    this.state = {
+      showButtonTwo: () => {}
+    };
+  }
   render() {
     return (
       <React.Fragment>
         <Button onClick={() => {
-          alert("Example alert");
+          this.state.showButtonTwo();
         }} visible={true}>
           Example Button
+        </Button>
+        <Button returnfunctions={(functions) => {this.setState({showButtonTwo: functions.show})}} onClick={() => {
+          alert("Example alert");
+        }} visible={false}>
+          Another Example Button
         </Button>
       </React.Fragment>
     );
