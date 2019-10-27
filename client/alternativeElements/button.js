@@ -10,14 +10,14 @@ class Button extends Component {
       width: props.visible ? (props.width ? props.width : "400px") : "0",
       onClick: props.onClick,
       visible: props.visible,
-      needsReset: false
+      classes: "",
     }
     if (props.returnfunctions) {
       props.returnfunctions({show: () => {this.show(this)}, hide: () => {this.hide(this)}})
     }
   }
   show(that) {
-    that.setState({visible: true, width: 0, onClick: that.state.oldOnClick, needsReset: true});
+    that.setState({visible: true, width: 0, onClick: that.state.oldOnClick, classes: "animatein"});
   }
   hide(that) {
     that.setState({width: "0", onClick: () => {}});
@@ -27,17 +27,16 @@ class Button extends Component {
   }
   render() {
     if (this.state.visible) {
-      if (this.state.needsReset) {
-        this.setState({width: this.state.oldWidth ? this.state.oldWidth : "400px", needsReset: false});
-      }
       return (
         <React.Fragment>
-          <button style={{width: this.state.width}} onClick={() => {
-            this.state.onClick();
-            this.hide(this);
-          }}>
-            {this.props.children}
-          </button>
+          <div style={{width: this.state.width}}>
+            <button className={this.state.classes} onClick={() => {
+              this.state.onClick();
+              this.hide(this);
+            }}>
+              {this.props.children}
+            </button>
+          </div>
         </React.Fragment>
       );
     } else {
