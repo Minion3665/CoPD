@@ -5,7 +5,7 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: props.width ? props.width : "400px",
+      width: props.visible ? (props.width ? props.width : "400px") : "0",
       onClick: props.onClick,
       visible: props.visible
     }
