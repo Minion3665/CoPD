@@ -11,12 +11,14 @@ class Button extends Component {
       onClick: props.onClick,
       visible: props.visible
     }
+    this.needsReset = false;
     if (props.returnfunctions) {
       props.returnfunctions({show: () => {this.show(this)}, hide: () => {this.hide(this)}})
     }
   }
   show(that) {
-    that.setState({visible: true, width: that.state.oldWidth ? that.state.oldWidth : "400px", onClick: that.state.oldOnClick});
+    that.setState({visible: true, width: 0, onClick: that.state.oldOnClick});
+    that.needsReset = true;
   }
   hide(that) {
     that.setState({width: "0", onClick: () => {}});
@@ -25,6 +27,9 @@ class Button extends Component {
     }, 1000);
   }
   render() {
+    if (this.needsReset) {
+      this.setState({width: this.state.oldWidth ? this.state.oldWidth : "400px"});
+    }
     if (this.state.visible) {
       return (
         <React.Fragment>
