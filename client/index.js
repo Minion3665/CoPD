@@ -25,7 +25,9 @@ class App extends Component {
         }} visible={true}>
           Example Button
         </Button>
-        <Button returnfunctions={(functions) => {this.setState({showButtonTwo: functions.show})}} onClick={() => {
+        <Button returnfunctions={(functions) => {
+          this.setState({showButtonTwo: functions.show});
+        }} onClick={() => {
           alert("Example alert");
         }} visible={false}>
           Another Example Button
