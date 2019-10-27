@@ -16,6 +16,23 @@ button {
 	font-size: 150%;
 	font-weight: bolder;
 }
+button.animatein {
+	-webkit-animation-name: lengthen;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: example;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes lengthen {
+	from {width: 0;}
+	to {width: 100%;}
+}
+@keyframes lengthen {
+	from {width: 0;}
+	to {width: 100%;}
+}
 
 button:hover {
 	background-color: #2af5ff;
