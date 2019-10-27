@@ -6,11 +6,11 @@ button {
 	height: 100px;
 	box-shadow: #2191fb 0px 0px 50px 15px;
 	border-radius: 100px;
-	max-width: 80vw;
 	overflow: hidden;
 	position: relative;
 	left: 50%;
 	transform: translate(-50%);
+	transition: all 1s ease 0s;
 	line-height: 90%;
 	font-size: 150%;
 	font-weight: bolder;
