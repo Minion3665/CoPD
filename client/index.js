@@ -17,7 +17,7 @@ class App extends Component {
       <React.Fragment>
         <Button onClick={() => {
           alert("Example alert");
-        }}>
+        }} visible={true}>
           Example Button
         </Button>
       </React.Fragment>
