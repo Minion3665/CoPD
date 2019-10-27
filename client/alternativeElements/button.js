@@ -12,7 +12,7 @@ class Button extends Component {
       visible: props.visible
     }
     if (props.returnfunctions) {
-      props.returnfunctions({show: (this) => {this.show}, hide: (this) => {this.hide}})
+      props.returnfunctions({show: () => {this.show(this)}, hide: () => {this.hide(this)}})
     }
   }
   show(that) {
