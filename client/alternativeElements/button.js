@@ -27,8 +27,8 @@ class Button extends Component {
       return (
         <React.Fragment>
           <button style={{width: this.state.width}} onClick={() => {
-            this.hide();
             this.state.onClick();
+            this.hide();
           }}>
             {this.props.children}
           </button>
