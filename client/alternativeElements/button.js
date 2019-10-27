@@ -11,7 +11,8 @@ class Button extends Component {
       onClick: props.onClick,
       visible: props.visible
     }
-    this.needsReset = false;
+    let needsReset = false;
+    super(needsReset);
     if (props.returnfunctions) {
       props.returnfunctions({show: () => {this.show(this)}, hide: () => {this.hide(this)}})
     }
