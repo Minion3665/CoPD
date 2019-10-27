@@ -23,7 +23,7 @@ class Button extends Component {
     }, 1000);
   }
   render() {
-    if (visible) {
+    if (this.state.visible) {
       return (
         <React.Fragment>
           <button style={{width: this.state.width}} onClick={() => {
