@@ -22,7 +22,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <Button onClick={() => {
-          this.state.showButtonTwo();
+          setTimeout(() => {
+            this.state.showButtonTwo();
+          }, 1000);
         }} visible={true}>
           Example Button
         </Button>
