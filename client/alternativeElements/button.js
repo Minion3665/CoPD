@@ -5,6 +5,8 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      oldWidth: props.width,
+      oldOnClick: props.onClick,
       width: props.visible ? (props.width ? props.width : "400px") : "0",
       onClick: props.onClick,
       visible: props.visible
@@ -14,8 +16,7 @@ class Button extends Component {
     }
   }
   show() {
-    let width = this.props.width ? this.props.width : "400px"
-    this.setState({visible: true, width: width, onClick: this.props.onClick});
+    this.setState({visible: true, width: this.state.width ? this.state.width : "400px", onClick: this.state.oldOnClick});
   }
   hide() {
     this.setState({width: "0", onClick: () => {}});
