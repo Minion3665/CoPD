@@ -15,13 +15,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showButtonTwo: () => {}
+      showButtonTwo: (that) => { that.show(that) }
     };
   }
   render() {
     return (
       <React.Fragment>
-        <Button onClick={() => {
+        <Button onClick={(that) => {
           setTimeout(() => {
             this.state.showButtonTwo();
           }, 1000);
@@ -30,7 +30,7 @@ class App extends Component {
         </Button>
         <Button returnfunctions={(functions) => {
           this.setState({showButtonTwo: functions.show});
-        }} onClick={() => {
+        }} onClick={(that) => {
           alert("Example alert");
         }} visible={false}>
           Another Example Button
