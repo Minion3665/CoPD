@@ -17,7 +17,11 @@ class Button extends Component {
     }
   }
   show(that) {
-    that.setState({visible: true, width: 0, onClick: that.state.oldOnClick, classes: "animatein"});
+    that.setState({visible: true,
+                   width: that.props.width ? that.props.width : "400px",
+                   onClick: that.state.oldOnClick,
+                   classes: "animatein"
+                  });
   }
   hide(that) {
     that.setState({width: "0", onClick: () => {}});
