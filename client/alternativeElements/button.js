@@ -29,7 +29,7 @@ class Button extends Component {
     if (this.state.visible) {
       return (
         <React.Fragment>
-          <div style={{width: this.state.width}}>
+          <div className={"buttoncontainer"} style={{width: this.state.width}}>
             <button className={this.state.classes} onClick={() => {
               this.state.onClick();
               this.hide(this);
