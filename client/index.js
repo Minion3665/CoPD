@@ -23,22 +23,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Button returnfunctions={(functions) => {
-          this.setState({showButtonOne: functions.show});
-        }} onClick={(that) => {
-          setTimeout(() => {
-            this.state.showButtonTwo();
-          }, 1000);
-        }} visible={true}>
-          Example Button
-        </Button>
-        <Button returnfunctions={(functions) => {
           this.setState({showButtonTwo: functions.show});
         }} onClick={(that) => {
           setTimeout(() => {
             this.state.showButtonOne();
           }, 1000);
         }} visible={false}>
-          Another Example Button
+          {this.state.buttontext}
         </Button>
       </React.Fragment>
     );
